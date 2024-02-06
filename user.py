@@ -6,3 +6,7 @@ class User(BaseClass):
         self.first_name = first_name
         self.last_name = last_name
         self.phone_number = phone_number
+
+    @property
+    def fullname(self):
+        return f'{self.first_name.title()} {self.last_name}'
