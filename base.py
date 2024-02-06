@@ -5,9 +5,10 @@ class BaseClass(ABC):
     _id = 0
     objects_list = list()
 
-    def __init__(self):
+    def __init__(self, *args, **kwargs):
         self.id = self.generate_id()
         self.store(self)
+        super().__init__(*args, **kwargs)
 
     @classmethod
     def generate_id(cls):
