@@ -19,4 +19,6 @@ class Rent(ABC):
         self.discountable = discountable
         self.convertible = convertible
         super().__init__(*args, **kwargs)
-    
+
+    def show_price(self):
+        print(f'Monthly Price: {self.monthly_price}\t Discount: {self.discountable}\t Convrtible: {self.convertible}')
